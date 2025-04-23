@@ -11,7 +11,7 @@
     <script src="/Outil-de-calcul-ANV-forfaitaire/achatANVscript.js" defer></script>
 </head>
 
-<body class="containerPageAchat"><img src="/contenu.png" class="image_fond_achat"><img src="/image1.png" class="image1_Achat">
+<body class="containerPageAchat"><img src="/Outil-de-calcul-ANV-forfaitaire/contenu.png" class="image_fond_achat"><img src="/Outil-de-calcul-ANV-forfaitaire/image1.png" class="image1_Achat">
     <header class="header_achat">
         <div class="Logo_header_achat">
             <a href="https://www.urssaf.fr/accueil.html">
@@ -46,9 +46,9 @@
             <div class="carburant">
                 <p>L'employeur prend en charge le carburant :</p>
                 <label for="prend en charge du carburant">Oui</label>
-                <input type="radio" id="employeurPaieCarburant" name="fuel" value="true"/>
+                <input type="radio" id="employeurPaieCarburant" name="fuel" value="true" required />
                 <label for="ne prend pas en charge du carburant">Non</label>
-                <input type="radio" id="employeurNotPaieCarburant" name="fuel" value="false"/>
+                <input type="radio" id="employeurNotPaieCarburant" name="fuel" value="false" required />
             </div>
             <div class="button_calcul">
                 <input type="button" id="btn_calcul_ANV_achat" value="Calcul"/>
