@@ -1,0 +1,349 @@
+a, img, input[type="button"], button{
+    display: none;
+}
+
+
+.containerAccueil {
+    display: grid;
+    grid-template-columns: 7em 1fr 1fr 1fr 1fr 10em;
+    grid-template-rows: 5em 10em 6em 7em 10em;
+    max-width: 1900px;
+    padding: 0px;
+    width: 100vw;
+    position: relative;
+    margin: auto;
+  }
+  
+  .Logo {
+    grid-area: 1 / 1 / 2 / 2;
+
+  }
+  .Image1 {
+    grid-area: 2 / 1 / 4 / 2;
+    background-color: #EFF4FF;
+  }
+  .TitreAccueil {
+    grid-area: 2 / 2 / 3 / 6;
+    background-color: #EFF4FF;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1D458C;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Image2 {
+    grid-area: 2 / 6 / 4 / 7;
+    background-color: #EFF4FF;
+  }
+  #imgRight {
+    position: relative;
+    right: 45px;
+    width: 130%;
+    height: 100%;
+  }
+  .boutons {
+    display: grid;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "btnAchat btnLocation";
+    grid-area: 3 / 2 / 4 / 6;
+    background-color: #EFF4FF;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .btnAchat {
+    grid-area: btnAchat;
+    width: 7em;
+    height: 1em;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", Arial, sans-serif;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 3rem;
+    padding: .75rem 1.5rem;
+    transition-duration: 0.3s;
+    text-align: center;
+    border: 2px solid #1D458C;
+    background-color: #1D458C;
+    align-self: center;
+  }
+  .btnLocation {
+    grid-area: btnLocation;
+    width: 7em;
+    height: 1em;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", Arial, sans-serif;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 3rem;
+    padding: .75rem 1.5rem;
+    transition-duration: 0.3s;
+    text-align: center;
+    border: 2px solid #1D458C;
+    background-color: #1D458C;
+  }
+  .boutons a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  .TAchat {
+    grid-area: 4 / 2 / 5 / 4;
+  }
+  .TLocation {
+    grid-area: 4 / 4 / 5 / 6;
+  }
+  .PAchat {
+    grid-area: 5 / 2 / 6 / 4;
+  }
+  .PLocation {
+    grid-area: 5 / 4 / 6 / 6;
+    display: flex;
+  }
+  .TitreParagraphe {
+    font-family: Arial, Helvetica, sans-serif;
+    column-gap: 5em;
+    background-color: rgb(245, 244, 244);
+    color: #1D458C;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    margin-top: 1em;
+    font-size: 15px;
+  }
+  .Paragraphe {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(245, 244, 244);
+    padding: 1em;
+    flex-shrink: 2;
+  }
+  h2:after {
+    background-color: #20BFC8;
+    content: '';
+    display: block;
+    height: 0.25rem;
+    margin-top: 1rem;
+    width: 5rem;
+  }
+  .containerPageAchat, .containerPageLocation{
+    position : relative;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 15% 1fr 1fr 1fr 15%;
+    grid-template-rows: 5em 10em 25em 5em 5em 5em;
+    margin: auto;
+    max-width: 1900px;
+    padding: 0px;
+    width: 100vw;
+  
+  
+  
+  }
+  .image_fond_achat{
+    position: absolute;
+    width: 20%;
+    top: 11.75%;
+    left: 80%;
+    
+  }
+  
+  .image1_Achat{
+    width: 10%;
+    position: absolute;
+    top: 12%;
+  }
+  .image_fond_location{
+    position: absolute;
+    width: 20%;
+    top: 26%;
+    
+      
+  }
+  #imgRightLocation{
+    width: 13.4%;
+    position: absolute;
+    top: 7.4%;
+    left: 86.8%;
+  }
+  .header_achat, .header_location{
+    display: flex;
+    margin: 1rem;
+  
+  
+  }
+  .Logo_header_achat, .Logo_header_location{
+    flex-grow: 1;
+  
+  
+  }
+
+  
+  .TitrePageAchat, .TitrePageLocation{
+    grid-area: 2 / 1 / 3 / 6;
+    background-color: #EFF4FF;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1D458C;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  
+  
+  }
+  .rappel_calcul_achat {
+    grid-area: 6 / 1 / 4 / 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EFF4FF;
+  
+  }
+  .rappel_calcul_achat::after{
+    background-color: #20BFC8;
+    content: '';
+    height: 0.25rem;
+    margin-bottom: 1rem;
+    width: 10rem;
+    display: block;
+    position: relative;
+    bottom: 2em;
+    right: 620px;
+      
+  }
+  .rappel_calcul_achat::before{
+      background-color: #20BFC8;
+      content: '';
+      display: block;
+      position: relative;
+      top: 2em;
+      left: 620px;
+      height: 0.25rem;
+      margin-top: 1rem;
+      width: 10rem;
+  }
+  
+  .rappel_calcul_location{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EFF4FF;
+
+  }
+
+  
+  form{
+  grid-area: 3 / 3 / 4 / 4;
+  display: flex;
+  justify-content: center;
+  
+
+  }
+  fieldset{
+    margin: auto;
+  }
+  
+  label{
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  }
+  input {
+    height: 2.5em;
+    display: flex;
+    text-align: end;
+    
+  
+    
+  }
+  .champs [type="number"]{
+    margin-left: 33%;
+  }
+  .champs [ type="date"]{
+    margin-left: 40%;
+  }
+  .carburant{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .carburant [type="radio"]{
+    height: 2.5em;
+  }
+
+  .résulatAnvForfaitAchat, .résulatAnvForfaitLocation{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  
+  #coutTTC, #montantLoyer, #montantAssurance, #montantEntretien,  #dateMiseEnCirculation{
+    display: flex;
+
+  }
+
+
+  .carburant [type="radio"]{
+    display: inline-block;
+    width: 1rem;
+  
+  }
+  .résulatAnvForfaitAchat {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  .résulatAnvForfaitLocation{
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  #montantANVretenu{
+    font-size: 2em;
+  }
+  .print, .button_calcul{
+    place-self: center;
+  
+  }
+  
+  .button_calcul [type="button"], .print [type="button"]{
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #1D458C;
+    border: 2px solid #1D458C;
+    color: #ffffff;
+    font-family: "Roboto", Arial, sans-serif;
+    padding: .75rem 1.5rem;
+    border-radius: 3rem;
+  }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul ANV forfait</title>
+    <link rel="stylesheet" type="text/css" href="screen.css" media="screen">
+    <link rel="stylesheet" href="impression.css" type="text/css" media="print">
+    <script src="script.js" defer></script>
+    <script src="achatANVscript.js" defer></script>
+</head>
+
+<body class="containerPageAchat"><img src="/contenu.png" class="image_fond_achat"><img src="/image1.png" class="image1_Achat">
+    <header class="header_achat">
+        <div class="Logo_header_achat">
+            <a href="https://www.urssaf.fr/accueil.html">
+                <img src="https://www.urssaf.fr/files/live/sites/urssaffr/files/logos/logo.svg" alt="logo urssaf">
+            </a>
+        </div>
+        <div class="accueil">
+            <a href="/index.html">Accueil</a>
+        </div>
+       
+    </header>
+   
+    <h1 class="TitrePageAchat">
+        Calcul de l'avantage en nature véhicule au forfait<br>pour un véhicule acheté
+    </h1>
+    <div class="rappel_calcul_achat">
+        <p>L’avantage est égal à 15 % du coût d’achat TTC (10 % si le véhicule a plus de 5 ans). <br>Si l'employeur prend en charge le
+            carburant, vous devez l’ajouter soit en réel, soit en majorant l’avantage à 20 % (ou 15 % si le véhicule
+            a plus de 5 ans)
+        </p>
+    </div>
+    <form id="form">
+        <fieldset class="champs">
+            <div class="coûtTTC">
+                <label for="coût TTC véhicule">Prix du véhicule TTC :</label>
+                <input type="number" step="0.01" id="coutTTC" placeholder="0.00 €" required min="0.00"/>
+            </div>
+            <div class="Année">      
+                <label for="année mise en circulation">Année de 1ère mise en circulation :</label>
+                <input type="date" id="dateMiseEnCirculation" placeholder="jj/mm/aaaa" required />
+            </div> 
+            <div class="carburant">
+                <p>L'employeur prend en charge le carburant :</p>
+                <label for="prend en charge du carburant">Oui</label>
+                <input type="radio" id="employeurPaieCarburant" name="fuel" value="true"/>
+                <label for="ne prend pas en charge du carburant">Non</label>
+                <input type="radio" id="employeurNotPaieCarburant" name="fuel" value="false"/>
+            </div>
+            <div class="button_calcul">
+                <input type="button" id="btn_calcul_ANV_achat" value="Calcul"/>
+            </div>
+        </fieldset>
+    </form>
+    <div class="résulatAnvForfaitAchat">
+        <p id="resultatANVAchat"></p>
+    </div>
+    <div class="print">
+        <button type="button" id="printPdf">Impression</button>
+    </div>
+
+</body>

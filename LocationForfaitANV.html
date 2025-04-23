@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul ANV forfait</title>
+    <link rel="stylesheet" type="text/css" href="screen.css" media="screen">
+    <link rel="stylesheet" href="impression.css" type="text/css" media="print">
+    <script src="script.js" defer></script>
+    <script src="locationANVscript.js" defer></script>
+</head>
+
+<body class="containerPageLocation"><img src="/contenu_location.png" class="image_fond_location"><img id="imgRightLocation" src="/image2.png">
+    <header class="header_location">
+        <div class="Logo_header_location">
+            <a href="https://www.urssaf.fr/accueil.html">
+                <img src="https://www.urssaf.fr/files/live/sites/urssaffr/files/logos/logo.svg" alt="logo urssaf">
+            </a>
+        </div>
+        <div class="accueil">
+            <a href="/index.html">Accueil</a>
+        </div>
+       
+    </header>
+   
+    <h1 class="TitrePageLocation">
+        Calcul de l'avantage en nature véhicule au forfait<br>pour un véhicule loué
+    </h1>
+    <div class="rappel_calcul_location">
+        <p>Lorsque votre salarié paie ses frais de carburant, l’évaluation résultant de l’usage privé est égale à 50
+            % du coût global annuel TTC comprenant la location, l’entretien et l’assurance. <br>Si l'employeur prend en charge le
+            carburant, vous devez en évaluer les frais au réel ou évaluer l’avantage en nature sur 67 % du coût
+            global annuel pour la location. <br>Dans les deux cas, l’avantage évalué ne peut pas être supérieur à celui
+            qui aurait été évalué en cas de véhicule acheté.
+        </p>
+    </div>
+    <form id="form">
+        <fieldset class="champs">
+            <div class="loyerMensuelVéhicule">
+                <label for="loyerMensuel">Loyer mensuel pour la location du véhicule :</label>
+                <input type="number" step="0.01" id="montantLoyer" placeholder="0.00 €" required min="0.00"/>
+            </div>
+            <div class="assuranceMensuelVéhicule">
+                <label for="assuranceMensuel">Montant de l'assurance mensuelle pour la location du véhicule :</label>
+                <input type="number" step="0.01" id="montantAssurance" placeholder="0.00 €" required min="0.00"/>
+            </div>
+            <div class="entretienMensuelVéhicule">
+                <label for="entretienMensuel">Montant de l'entretien mensuel pour la location du véhicule :</label>
+                <input type="number" step="0.01" id="montantEntretien" placeholder="0.00 €" required min="0.00"/>
+            </div>
+            <div class="coûtTTC">
+                <label for="coût TTC véhicule">Prix du véhicule TTC :</label>
+                <input type="number" step="0.01" id="coutTTC" placeholder="0.00 €" required min="0.00"/>
+            </div>
+            <div class="Année">      
+                <label for="année mise en circulation">Année de 1ère mise en circulation :</label>
+                <input type="date" id="dateMiseEnCirculation" placeholder="jj/mm/aaaa" required />
+            </div> 
+            <div class="carburant">
+                <p>L'employeur prend en charge le carburant :</p>
+                <label for="prend en charge du carburant">Oui</label>
+                <input type="radio" id="employeurPaieCarburant" name="fuel" value="true"/>
+                <label for="ne prend pas en charge du carburant">Non</label>
+                <input type="radio" id="employeurNotPaieCarburant" name="fuel" value="false"/>
+            </div>
+            <div class="button_calcul">
+                <input type="button" id="btn_calcul_ANV_Location" value="Calcul"/>
+            </div>
+        </fieldset>
+    </form>
+    <div class="résulatAnvForfaitLocation">
+        <p id="resultatANVLocation"></p>
+        <p id="resultatANVAchatMensuel"></p>
+        <p id="montantANVretenu"></p>
+    </div>
+    <div class="print">
+        <button type="button" id="printPdf">Impression</button>
+    </div>
+
+</body>
