@@ -9,11 +9,19 @@ const calculAchat = document.querySelector("#btn_calcul_ANV_achat");
 if (calculAchat != null){
     calculAchat.addEventListener("click", PrintResulANVAchatOnclick);
 }
-function PrintResulANVAchatOnclick(){
+function PrintResulANVAchatOnclick(event){
 // Récuparation des éléments et valeurs saisis par l'utilisateur
     const coutTTC = document.querySelector("#coutTTC").value;
     const date1ereCirculation = document.querySelector("#dateMiseEnCirculation").value;
     const fuelPaid = document.getElementById("employeurPaieCarburant").checked;
+    const fuel = document.querySelector('input[name="fuel"]:checked');    
+    
+    if (coutTTC == "" || date1ereCirculation == "" || fuel == null){
+        // Si l'un des champs obligatoires est vide, afficher une alerte et empêcher l'envoi du formulaire
+        alert("Veuillez remplir tous les champs obligatoires.");
+        event.preventDefault();
+        return;
+    }
 // Exécution de la fonction calculAnvAchat avec les paramètres saisis + Récupération du résulat de la fonction
     const resultat = calculAnvAchat(coutTTC,date1ereCirculation,fuelPaid);
     const resultatMensuel = resultat/12;
@@ -21,3 +29,4 @@ function PrintResulANVAchatOnclick(){
 // Affichage du texte + resultat dans la page html    
     document.getElementById("resultatANVAchat").innerHTML = "Le montant annuel de l'avantage en nature est de : " + resultat.toFixed(2) + "€, soit " +resultatMensuel.toFixed(2) + "€ par mois."
 }
+

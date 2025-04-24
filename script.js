@@ -1,3 +1,16 @@
+//Saisie de la date maximum au jour d'aujourd'hui
+// Récupération de la date du jour
+const today = new Date();
+// Récupération de l'élément input de type date
+const dateInput = document.querySelector("#dateMiseEnCirculation");
+// Vérification si l'élément input existe
+if (dateInput) {
+    // Formatage de la date au format YYYY-MM-DD
+    const formattedDate = today.toISOString().split("T")[0];
+    // Définition de la valeur maximale de l'input date
+    dateInput.setAttribute("max", formattedDate);
+}
+
 //Calcul du montant de l'ANV en cas d'achat du véhicule
 function calculAnvAchat(prixTTC,dateCirculation,carbEstPrisEnCharge){
 //Calculer l'age du vehicule

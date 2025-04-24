@@ -9,7 +9,7 @@ function generatePdf(){
     if (calculLocation != null){
         calculLocation.addEventListener("click", PrintResulANVLocationOnclick);
     }
-function PrintResulANVLocationOnclick(){
+function PrintResulANVLocationOnclick(event){
     // Récuparation des éléments et valeurs saisis par l'utilisateur
         const loyer = document.querySelector("#montantLoyer").value;
         const assurance = document.querySelector("#montantAssurance").value;
@@ -17,6 +17,14 @@ function PrintResulANVLocationOnclick(){
         const fuelPaid = document.getElementById("employeurPaieCarburant").checked;
         const coutTTC = document.querySelector("#coutTTC").value;
         const date1ereCirculation = document.querySelector("#dateMiseEnCirculation").value;
+        const fuel = document.querySelector('input[name="fuel"]:checked');    
+    
+        if (loyer == "" || assurance == "" || entretien == "" || coutTTC == "" || date1ereCirculation == "" || fuel == null){
+            // Si l'un des champs obligatoires est vide, afficher une alerte et empêcher l'envoi du formulaire
+            alert("Veuillez remplir tous les champs obligatoires.");
+            event.preventDefault();
+            return;
+        }
     // Exécution de la fonction calculAnvLocation avec les paramètres saisis + Récupération du résulat de la fonction
         const resultatLocationMensuel = calculAnvLocation(loyer,assurance,entretien,fuelPaid);
         const resultatAchatAnnuel = calculAnvAchat(coutTTC,date1ereCirculation,fuelPaid);
